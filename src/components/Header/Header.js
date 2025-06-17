@@ -32,6 +32,7 @@ function Header() {
       <nav>
         <a href="#about" className={activeId === 'about' ? styles.active : ''}>Über mich</a>
         <a href="#projects" className={activeId === 'projects' ? styles.active : ''}>Projekte</a>
+        <a href="#skills" className={activeId === 'skills' ? styles.active : ''}>Skills</a>
       </nav>
     </header>
   );

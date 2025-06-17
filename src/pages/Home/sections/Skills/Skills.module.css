@@ -1,0 +1,120 @@
+:root {
+    --hex-size: 8vw;
+    --hex-margin: clamp(0.2rem, 0.5rem, 0.6rem);
+    --hex-row-height: calc(1.732 * var(--hex-size) + 4 * var(--hex-margin) - 1px);
+    --hex-bg-even: color-mix(in srgb, var(--color-background-secondary) 80%, #e10cfd 20%);
+    --hex-bg-odd: color-mix(in srgb, var(--color-background-secondary) 80%, #fbdcff 20%);
+}
+
+.hexagonContainerWrapper {
+    display: flex;
+    justify-content: center;
+    padding-block: calc(var(--hex-size) * 0.3);
+}
+
+.hexagonContainer {
+    width: 80%;
+    overflow: visible;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    padding-block: calc(var(--hex-size) * 0.3);
+}
+
+@media (max-width: 768px) {
+    .hexagonContainer {
+        width: 100%;
+    }
+}
+
+.hexagonContainer div {
+    position: relative;
+    width: var(--hex-size);
+    height: calc(var(--hex-size) * 1.1547);
+    margin: var(--hex-margin);
+    display: inline-block;
+    vertical-align: top;
+    font-size: initial;
+    background: transparent;
+    margin-bottom: calc(var(--hex-margin) - var(--hex-size) * 0.2885);
+    transition: scale 0.2s ease-in-out, filter 0.2s ease-in-out;
+    filter: drop-shadow(0 0 0 transparent);
+    z-index: 0;
+}
+
+.hexagonContainer div::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    background: var(--hex-bg-even);
+    z-index: -1;
+}
+
+.hexagonContainer div:nth-child(odd)::before {
+    background: var(--hex-bg-odd);
+}
+
+.hexagonContainer div:hover {
+    scale: 1.05;
+    filter:
+        drop-shadow(3px 3px 3px var(--color-primary)) drop-shadow(-2px -2px 6px var(--color-secondary));
+}
+
+.skillName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-text-primary);
+    font-weight: 600;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+
+    width: 90%;
+    height: 90%;
+    line-height: 1.1;
+
+    font-size: calc(var(--hex-size) * 0.16);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    box-sizing: border-box;
+}
+
+
+.hexagonContainer::before {
+    content: "";
+    width: calc(var(--hex-size) / 2 + var(--hex-margin));
+    float: left;
+    height: 100%;
+    shape-outside: repeating-linear-gradient(#0000 0 calc(var(--hex-row-height) - 3px),
+            #000 0 var(--hex-row-height));
+}
+
+.sectionContent {
+  position: relative;
+}
+
+.sectionContent::after {
+  content: "";
+  position: absolute;
+  top: 2.5%;
+  right: 0;
+  width: 1px;
+  height: 95%;
+  background: linear-gradient(to bottom, green, yellow, red);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.skillsHeading {
+  margin: 0;
+  font-size: var(--font-size-xlarge);
+  padding: var(--space-normal);
+}
