@@ -1,0 +1,39 @@
+.heroImage {
+    width: clamp(150px, 20vw, 200px);
+    height: clamp(150px, 20vw, 200px);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--color-primary);
+    transition: border-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.heroImage:hover {
+    border-color: var(--color-secondary);
+}
+
+.heroContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xlarge);
+    padding: 0 var(--space-xxlarge);
+    text-align: left;
+}
+
+.heroContent {
+    flex: 1 1 20rem;
+}
+
+.heroMessage {
+    font-size: var(--font-size-xxlarge);
+    font-weight: bold;
+}
+
+.heroDescription {
+    font-size: var(--font-size-large);
+    margin-top: var(--space-small);
+    color: var(--color-text-secondary);
+}

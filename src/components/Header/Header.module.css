@@ -1,0 +1,27 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: calc(var(--space-large));
+    padding: var(--space-large);
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    background-color: var(--color-background-primary);
+}
+
+.scrolled {
+    background-color: var(--color-background-secondary);
+}
+
+nav a {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-large);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--color-primary);
+}
