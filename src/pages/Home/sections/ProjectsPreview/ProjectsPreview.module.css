@@ -1,0 +1,32 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  text-decoration: none;
+  width: 300px;
+  aspect-ratio: 3/4;
+  color: inherit;
+  border-radius: var(--radius-small);
+
+  box-shadow: 0 6px 14px var(--color-primary);
+  transition: all 0.1s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 6px var(--color-secondary);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: var(--radius-small) var(--radius-small) 0 0;
+}
+
+.card *:not(img) {
+  padding: 0 1rem;
+}

@@ -1,0 +1,45 @@
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: white;
+  color: black;
+  width: 50%;
+  height: 60%;
+  padding: 3rem;
+  max-height: 80%;
+  overflow-y: auto;
+  border-radius: var(--radius-small);
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: var(--font-size-xxlarge);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modalImage {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}

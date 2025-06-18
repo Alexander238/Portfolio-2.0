@@ -37,7 +37,7 @@
     font-size: initial;
     background: transparent;
     margin-bottom: calc(var(--hex-margin) - var(--hex-size) * 0.2885);
-    transition: scale 0.2s ease-in-out, filter 0.2s ease-in-out;
+    transition: scale 0.1s ease-in-out, filter 0.3s ease-in-out;
     filter: drop-shadow(0 0 0 transparent);
     z-index: 0;
 }

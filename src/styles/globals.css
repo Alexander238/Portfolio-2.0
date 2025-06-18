@@ -24,9 +24,11 @@
   /* ~48–64px */
 
   --radius-small: 0.5rem;
+  --radius-normal: 1rem;
 
   --color-background-primary: rgb(6, 3, 20);
   --color-background-secondary: rgb(40, 51, 95);
+  --color-background-tertiary: rgb(250, 250, 250);;
   --color-primary: #ffac5e;
   --color-secondary: #ff4b04;
   --color-text-primary: white;
@@ -74,22 +76,26 @@ main {
   flex-direction: column;
   min-height: 100vh;
   gap: var(--space-xxlarge);
-  padding: 0 var(--space-xxlarge);
 }
 
 section {
   position: relative;
-  width: 100%;
+  width: calc(100% - 2 * var(--space-xxlarge));
   min-height: calc(100vh - 4rem);
   scroll-margin-top: calc(3 * var(--space-large));
-
+  padding: 0 var(--space-xxlarge);
 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-section > * {
+section:nth-child(even) {
+  background: var(--color-background-tertiary);
+  color: black;
+}
+
+section>*:not(.modal) {
   width: 100%;
   max-width: 1200px;
 }
