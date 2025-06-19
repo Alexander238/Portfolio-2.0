@@ -1,12 +1,12 @@
 import Hero from './sections/Hero/Hero';
-import ProjectsPreview from './sections/ProjectsPreview/ProjectsPreview';
+import ProjectsCard from './sections/ProjectsCard/ProjectsCard';
 import Skills from './sections/Skills/Skills';
 
 function Home() {
   return (
       <>
           <Hero />
-          <ProjectsPreview />
+          <ProjectsCard />
           <Skills />
       </>
   );

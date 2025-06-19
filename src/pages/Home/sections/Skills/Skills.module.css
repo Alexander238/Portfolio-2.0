@@ -37,7 +37,7 @@
     font-size: initial;
     background: transparent;
     margin-bottom: calc(var(--hex-margin) - var(--hex-size) * 0.2885);
-    transition: scale 0.1s ease-in-out, filter 0.3s ease-in-out;
+    transition: scale 0.1s ease-in-out, filter 0.2s ease-in-out;
     filter: drop-shadow(0 0 0 transparent);
     z-index: 0;
 }
@@ -57,8 +57,16 @@
 
 .hexagonContainer div:hover {
     scale: 1.05;
-    filter:
-        drop-shadow(3px 3px 3px var(--color-primary)) drop-shadow(-2px -2px 6px var(--color-secondary));
+}
+
+.hexagonContainer div[data-level="Umfassend"]:hover {
+    filter: drop-shadow(0 0 3px green);
+}
+.hexagonContainer div[data-level="Erweitert"]:hover {
+    filter: drop-shadow(0 0 3px yellow);
+}
+.hexagonContainer div[data-level="Grundlegend"]:hover {
+    filter: drop-shadow(0 0 3px red);
 }
 
 .skillName {
@@ -106,11 +114,23 @@
   position: absolute;
   top: 2.5%;
   right: 0;
-  width: 1px;
+  width: 2px;
   height: 95%;
   background: linear-gradient(to bottom, green, yellow, red);
   pointer-events: none;
   z-index: 1;
+}
+
+.skillsHeadingHigh {
+    border-bottom: 2px solid green;
+}
+
+.skillsHeadingMedium {
+    border-bottom: 2px solid yellow;
+}
+
+.skillsHeadingLow {
+    border-bottom: 2px solid red;
 }
 
 .skillsHeading {

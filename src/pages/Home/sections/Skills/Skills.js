@@ -26,7 +26,7 @@ function Skills() {
         <section id="skills">
             <h1>Meine Skills</h1>
             <div className={styles.sectionContent}>
-                <h2 className={styles.skillsHeading}>Umfassend</h2>
+                <h2 className={`${styles.skillsHeading} ${styles.skillsHeadingHigh}`}>Umfassend</h2>
                 <div className={styles.hexagonContainerWrapper}>
                     <div className={styles.hexagonContainer}>
                         {skills.filter(s => s.level === 'Umfassend').map((skill, index) => (
@@ -37,7 +37,7 @@ function Skills() {
                     </div>
                 </div>
 
-                <h2 className={styles.skillsHeading}>Erweitert</h2>
+                <h2 className={`${styles.skillsHeading} ${styles.skillsHeadingMedium}`}>Erweitert</h2>
                 <div className={styles.hexagonContainerWrapper}>
                     <div className={styles.hexagonContainer}>
                         {skills.filter(s => s.level === 'Erweitert').map((skill, index) => (
@@ -48,7 +48,7 @@ function Skills() {
                     </div>
                 </div>
 
-                <h2 className={styles.skillsHeading}>Grundlegend</h2>
+                <h2 className={`${styles.skillsHeading} ${styles.skillsHeadingLow}`}>Grundlegend</h2>
                 <div className={styles.hexagonContainerWrapper}>
                     <div className={styles.hexagonContainer}>
                         {skills.filter(s => s.level === 'Grundlegend').map((skill, index) => (
