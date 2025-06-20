@@ -9,25 +9,30 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 1000;
+  max-width: none;
 }
 
 .modal {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 3rem;
+  overflow-y: auto;
+  border-radius: var(--radius-small);
+}
 
+.modalOuter {
+  display: flex;
   background: white;
   color: black;
-  width: 50%;
-  height: 60%;
-  padding: 3rem;
+  width: 70%;
+  height: 90%;
   max-height: 80%;
-  overflow-y: auto;
   border-radius: var(--radius-small);
   position: relative;
 }
 
-.closeButton {
+.closeButton,
+.zoomedImageCloseButton {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -37,9 +42,68 @@
   cursor: pointer;
 }
 
-.modalImage {
-  width: 300px;
-  height: auto;
-  object-fit: contain;
-  display: block;
+.zoomedImageCloseButton {
+  color: white;
+}
+
+.modal .stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-small);
+  margin: 0;
+}
+
+.modal .stack span {
+  box-shadow: 0 1px 2px black;
+  padding: var(--space-xsmall) var(--space-small);
+  background-color: rgb(245, 245, 245);
+  border-radius: 9999px;
+  font-size: var(--font-size-small);
+  transition: all 0.1s ease-in-out;
+}
+
+.modal .stack span:hover {
+  background-color: var(--color-secondary);
+  box-shadow: 0 3px 6px var(--color-primary);
+  color: var(--color-text-primary);
+  transform: scale(1.1);
+}
+
+.modal h2 {
+  font-size: var(--font-size-xxlarge);
+  margin: var(--space-normal) 0;
+}
+
+.modal h1 {
+  font-size: var(--font-size-xxxlarge);
+  margin: 0 0 var(--space-normal) 0;
+}
+
+.modal p {
+  font-size: var(--font-size-normal);
+  margin: 0;
+}
+
+.modal ul {
+  list-style-type: circle;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.imageGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-small);
+}
+
+.imageGallery img {
+  width: 50%;
+  object-fit: cover;
+  border-radius: var(--radius-small);
+  cursor: zoom-in;
+  transition: transform 0.2s ease-in-out;
+}
+
+.imageGallery img:hover {
+  transform: scale(1.01);
 }
