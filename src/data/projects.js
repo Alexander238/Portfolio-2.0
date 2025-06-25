@@ -1,11 +1,18 @@
-import PlaceholderImage from '../assets/images/Placeholder.jpg';
+//import PlaceholderImage from '../assets/images/Placeholder.jpg';
 import jumiGithub from '../assets/images/project-jumi/github.jpeg';
+import fotoManager from '../assets/images/fotomanager.png';
+import jumi from '../assets/images/jumi.png';
+import portfolioOld from '../assets/images/portfolioOld.png';
+import curvefever from '../assets/images/curvefever.png';
+import recipeapp from '../assets/images/recipeapp.png';
+import tvlistbeautify from '../assets/images/tvlistbeautify.png';
+import flappybird from '../assets/images/flappybird.png';
 
 const projects = [
   {
     id: 'projekt-1',
     title: 'Fotomanager',
-    image: PlaceholderImage,
+    image: fotoManager,
     description: 'Ein Fotomanager als Java-Anwendung unter Verwendung von JavaFX.',
     roles: ['Entwickler', 'Konfliktmanager', 'Designer von UML-Diagrammen', 'Tester'],
     stack: ['Java', 'JavaFX', 'PlantUML'],
@@ -13,11 +20,12 @@ const projects = [
     details: '',
     bonusImages: [],
     bonusVideos: [],
+    github: 'https://github.com/Alexander238/POIJ_Copy',
   },
   {
     id: 'projekt-2',
     title: 'JuMi-Webseite',
-    image: PlaceholderImage,
+    image: jumi,
     description: 'Website zur Verwaltung von privaten Statistikdaten für das Justizministerium des Landes Schleswig-Holstein.',
     roles: ['Entwickler', 'Anforderungsermittler', 'Systemarchitektur Designer', 'Datenbank Designer'],
     stack: ['HTML', 'CSS', 'JavaScript', 'NodeJS', 'SQL'],
@@ -36,11 +44,12 @@ const projects = [
                 Beteiligt war ich an fast allem, abgesehen von der Admin-Authentifizierung und der API zum Prüfen, ob Websites sicher oder unsicher sind.`,
     bonusImages: [jumiGithub],
     bonusVideos: [],
+    github: 'https://github.com/Alexander238/INF-Project-Save-Copy',
   },
   {
     id: 'projekt-3',
     title: 'Alte Portfolio-Webseite',
-    image: PlaceholderImage,
+    image: portfolioOld,
     description: 'Meine erste Portfolio-Website, die für meine Praktikumsstelle erstellt werden sollte, um einen Einblick in meinen damaligen Wissensstand zu bekommen.',
     roles: [],
     stack: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Git', 'GitHub', 'Firebase Hosting'],
@@ -48,11 +57,12 @@ const projects = [
     details: '',
     bonusImages: [],
     bonusVideos: [],
+    github: 'https://github.com/Alexander238/Portfolio',
   },
   {
     id: 'projekt-4',
     title: '"Curve Fever" - Spiel',
-    image: PlaceholderImage,
+    image: curvefever,
     description: 'Das Spiel ist eine eigene Interpretation des Spiels "Curve Fever" und durfte nicht mit dem Canvas-Element von HTML realisiert werden.',
     roles: ['Entwickler', 'Designer der Systemarchitektur', 'Tester'],
     stack: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitLab'],
@@ -61,11 +71,12 @@ const projects = [
               Um dieses Projekt auf GitHub bereitzustellen, musste eine beschädigte .rar-Datei wiederhergestellt werden. Dadurch gingen leider die selbst komponierten Soundeffekte verloren.`,
     bonusImages: [],
     bonusVideos: [],
+    github: 'https://github.com/Alexander238/CurveFever_copy',
   },
   {
     id: 'projekt-5',
     title: 'Rezepte-App',
-    image: PlaceholderImage,
+    image: recipeapp,
     description: 'Eine Android-App für Rezepte mit Dart in dem Framework Flutter.',
     roles: ['Entwickler', 'UI/UX-Designer', 'Tester'],
     stack: ['Dart', 'Flutter', 'Firebase', 'Figma', 'Git', 'GitHub'],
@@ -74,11 +85,12 @@ const projects = [
               Abgesehen davon haben alle Teammitglieder gemeinsam an der Lösung von Merge-Konflikten gearbeitet und Designentscheidungen in wöchentlichen Treffen besprochen.`,
     bonusImages: [],
     bonusVideos: [],
+    github: 'https://github.com/Alexander238/recipe_app_copy',
   },
   {
     id: 'projekt-6',
     title: 'TVListBeautify-App',
-    image: PlaceholderImage,
+    image: tvlistbeautify,
     description: 'Eine Android-App für Serien und Filme mit Dart in dem Framework Flutter.',
     roles: ['Entwickler', 'UI/UX-Designer', 'Tester'],
     stack: ['Dart', 'Flutter', 'Git', 'GitHub', 'Miro'],
@@ -86,11 +98,12 @@ const projects = [
     details: 'Dieses Projekt entstand aus persönlichem Interesse. Ich hatte bereits eine „Watchlist“ in meiner Notizen-App, die ich visuell besser gestalten wollte.',
     bonusImages: [],
     bonusVideos: [],
+    github: 'https://github.com/Alexander238/TVListBeautifyApp',
   },
   {
     id: 'projekt-7',
     title: '"Flappy Bird" AI',
-    image: PlaceholderImage,
+    image: flappybird,
     description: 'Ein Flappy Bird Spiel, welches von einer AI gespielt wird.',
     roles: ['Entwickler', 'Designer der Systemarchitektur', 'Tester'],
     stack: ['JavaScript', 'HTML', 'CSS', 'Python', 'Pygame', 'TensorFlow', 'Git', 'GitHub'],
@@ -98,6 +111,7 @@ const projects = [
     details: 'Dieses Projekt entstand aus persönlichem Interesse. Ich wollte schon länger mal eine KI entwickeln, die ein Spiel spielt. Flappy Bird erschien mir als geeignetes Spiel, da es relativ einfach ist. Um beim nächsten Mal bessere Ergebnisse zu erzielen, werde ich entweder ein anderes Spiel wählen oder eventuell einfachere Algorithmen verwenden.',
     bonusImages: [],
     bonusVideos: [],
+    github: 'https://github.com/Alexander238/AI_FlappyBird',
   },
 ];
 

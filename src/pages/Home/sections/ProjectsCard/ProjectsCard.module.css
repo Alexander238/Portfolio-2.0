@@ -8,17 +8,18 @@
 .card {
   text-decoration: none;
   width: 300px;
-  aspect-ratio: 6/8;
   color: inherit;
   border-radius: var(--radius-small);
 
-  box-shadow: 0 6px 14px var(--color-primary);
+  box-shadow: 0 0 8px var(--color-primary);
   transition: all 0.1s ease-in-out;
 
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: all 0.4s ease;
   cursor: pointer;
+
+  padding: 1.5rem;
 }
 
 .card.visible {
@@ -27,53 +28,76 @@
 }
 
 .card:hover {
-  box-shadow: 0 0 6px var(--color-secondary);
-}
+  box-shadow:
+    0 0 4px var(--color-primary),
+    0 6px 6px var(--color-secondary);
 
-.card:hover img {
-  border-bottom: 3px solid var(--color-secondary);
+  transform: translateY(-8px);
 }
 
 .card img {
   width: 100%;
+  height: 12rem;
   object-fit: cover;
   display: block;
-  border-radius: var(--radius-small) var(--radius-small) 0 0;
-  border-bottom: 3px solid var(--color-primary);
+  border-radius: var(--radius-small);
+  box-shadow: 0 0 0 1px var(--color-text-secondary);
 }
 
-.card *:not(img) {
-  padding: 0 1rem;
-}
-
-.card h2 {
+.card h3 {
   font-size: var(--font-size-medium);
+  margin-bottom: var(--space-xsmall);
+  text-align: left;
 }
 
 .card p {
   margin: 0;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-xsmall);
+  color: var(--color-text-tertiary);
 }
 
 .card .stack {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-small);
-  margin: var(--space-large) 0 var(--space-normal) 0;
+  margin: var(--space-normal) 0;
 }
 
 .card .stack span {
-  box-shadow: 0 1px 2px black;
-  padding: var(--space-xsmall) var(--space-small);
+  border: 1px solid var(--color-secondary);
+  padding: 0 var(--space-small);
   background-color: rgb(245, 245, 245);
   border-radius: 9999px;
-  font-size: var(--font-size-small);
-  transition: all 0.1s ease-in-out;
+  font-size: var(--font-size-xsmall);
+  transition: all 0.2s ease-in-out;
 }
 
 .card .stack span:hover {
-  background-color: var(--color-secondary);
-  box-shadow: 0 3px 6px var(--color-primary);
-  color: var(--color-text-primary);
-  transform: scale(1.1);
+  background-color: var(--color-secondary-hover);
+}
+
+.card .buttonWrapper {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.githubButton {
+  flex: 1 1 0%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.4rem 0;
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--radius-small);
+  cursor: alias;
+}
+
+.card .githubIcon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
 }

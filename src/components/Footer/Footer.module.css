@@ -1,9 +1,73 @@
 .footer {
-    padding: var(--space-large);
-    background-color: var(--color-background-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-large);
 }
 
 .footer p {
     margin: 0;
     color: var(--color-text-secondary);
+}
+
+.socialsWrapper {
+    display: flex;
+    gap: var(--space-normal);
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--space-small);
+}
+
+.socialsIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-background-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    width: 36px;
+    height: 36px;
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 1px solid var(--color-text-tertiary);
+}
+
+.socialsIcon:hover,
+.socialsIcon:focus {
+    background: var(--color-primary);
+    border-color: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.socialsIcon svg {
+    width: 18px;
+    height: 18px;
+    filter: none;
+    transition: filter 0.2s, color 0.2s;
+    display: block;
+    fill: white !important;
+}
+
+.socialsIcon:hover svg,
+.socialsIcon:focus svg {
+    color: white;
+}
+
+.footerEnd {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-large) 0 var(--space-xlarge) 0;
+    width: 60%;
+    border-top: 1px solid var(--color-secondary);
+    color: var(--color-text-secondary);
+}
+
+.footer h3 {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-tertiary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: var(--font-size-xxlarge);
+    margin: 0;
 }

@@ -36,12 +36,12 @@ function ProjectModal({ project, onClose }) {
             onClick={(e) => e.stopPropagation()}
           >
             <button className={styles.closeButton} onClick={onClose}>×</button>
-            <h1>{project.title}</h1>
+            <h2>{project.title}</h2>
 
             <p>{project.content}</p>
             {project.roles.length > 0 && (
               <>
-                <h2>Rollen</h2>
+                <h3>Rollen</h3>
                 <ul className={styles.roles}>
                   {project.roles.map((role, index) => (
                     <li key={index}>{role}</li>
@@ -50,7 +50,7 @@ function ProjectModal({ project, onClose }) {
               </>
             )}
 
-            <h2>Technologiestack</h2>
+            <h3>Technologiestack</h3>
             <div className={styles.stack}>
               {project.stack.map((tech, techIndex) => (
                 <span key={techIndex} className={styles.tech}>
@@ -61,7 +61,7 @@ function ProjectModal({ project, onClose }) {
 
             {project.details && (
               <>
-                <h2>Details</h2>
+                <h3>Details</h3>
                 <p>
                   {project.details.split('\n').map((line, i) => (
                     <React.Fragment key={i}>
@@ -76,7 +76,7 @@ function ProjectModal({ project, onClose }) {
 
             {project.bonusImages.length > 0 && (
               <>
-                <h2>Weitere Bilder</h2>
+                <h3>Weitere Bilder</h3>
                 <div className={styles.imageGallery}>
                   {project.bonusImages.map((image, index) => (
                     <img
@@ -93,7 +93,7 @@ function ProjectModal({ project, onClose }) {
 
             {project.bonusVideos.length > 0 && (
               <>
-                <h2>Bonus-Videos</h2>
+                <h3>Bonus-Videos</h3>
                 <div className={styles.videoGallery}>
                   {project.bonusVideos.map((video, index) => (
                     <video key={index} controls>

@@ -2,12 +2,29 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: calc(var(--space-large));
-    padding: var(--space-large);
+    padding: var(--space-large) var(--space-xlarge);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     transition: background-color 0.3s ease;
     background-color: var(--color-background-primary);
+}
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xlarge);
+}
+
+.header h1 {
+    display: flex;
+    margin: 0;
+    text-align: center;
+    font-size: var(--font-size-large);
+    background: linear-gradient(90deg, var(--color-primary), var(--color-tertiary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .scrolled {
@@ -17,11 +34,14 @@
 nav a {
     color: var(--color-text-secondary);
     font-size: var(--font-size-large);
-    font-weight: 700;
+    font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
     color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
 }

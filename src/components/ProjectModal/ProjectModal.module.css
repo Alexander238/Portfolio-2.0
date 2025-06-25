@@ -54,32 +54,32 @@
 }
 
 .modal .stack span {
-  box-shadow: 0 1px 2px black;
-  padding: var(--space-xsmall) var(--space-small);
+  border: 1px solid var(--color-secondary);
+  padding: 0 var(--space-small);
   background-color: rgb(245, 245, 245);
   border-radius: 9999px;
-  font-size: var(--font-size-small);
-  transition: all 0.1s ease-in-out;
+  font-size: var(--font-size-xsmall);
+  transition: all 0.2s ease-in-out;
 }
 
 .modal .stack span:hover {
-  background-color: var(--color-secondary);
-  box-shadow: 0 3px 6px var(--color-primary);
-  color: var(--color-text-primary);
-  transform: scale(1.1);
+  background-color: var(--color-secondary-hover);
+}
+
+.modal h3 {
+  text-align: left;
+  font-size: var(--font-size-xxlarge);
+  margin: var(--space-xlarge) 0 var(--space-normal) 0;
 }
 
 .modal h2 {
-  font-size: var(--font-size-xxlarge);
-  margin: var(--space-normal) 0;
-}
-
-.modal h1 {
+  text-align: left;
   font-size: var(--font-size-xxxlarge);
   margin: 0 0 var(--space-normal) 0;
 }
 
 .modal p {
+  color: black;
   font-size: var(--font-size-normal);
   margin: 0;
 }
