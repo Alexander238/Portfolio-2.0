@@ -93,15 +93,16 @@
 .imageGallery {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-small);
+  gap: var(--space-normal);
 }
 
 .imageGallery img {
-  width: 50%;
+  width: 48%;
   object-fit: cover;
   border-radius: var(--radius-small);
   cursor: zoom-in;
   transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 0 1px var(--color-text-secondary);
 }
 
 .imageGallery img:hover {

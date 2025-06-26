@@ -3,6 +3,7 @@ import jumiGithub from '../assets/images/project-jumi/github.jpeg';
 import fotoManager from '../assets/images/fotomanager.png';
 import jumi from '../assets/images/jumi.png';
 import portfolioOld from '../assets/images/portfolioOld.png';
+import portfolioOldProjects from '../assets/images/portfolioOldProjects.png';
 import curvefever from '../assets/images/curvefever.png';
 import recipeapp from '../assets/images/recipeapp.png';
 import tvlistbeautify from '../assets/images/tvlistbeautify.png';
@@ -55,7 +56,7 @@ const projects = [
     stack: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Git', 'GitHub', 'Firebase Hosting'],
     content: 'Diese Website wurde für mein Praktikum vollständig von mir selbst erstellt. Sie sollte einen Einblick in meine damaligen Erfahrungen und Kenntnisse bringen.',
     details: '',
-    bonusImages: [],
+    bonusImages: [portfolioOld, portfolioOldProjects],
     bonusVideos: [],
     github: 'https://github.com/Alexander238/Portfolio',
   },

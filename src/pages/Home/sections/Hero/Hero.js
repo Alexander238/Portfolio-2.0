@@ -4,10 +4,25 @@ import profilePicture from '../../../../assets/images/profilePicture.jpg';
 function Hero() {
   return (
     <section className={styles.heroSection} id="about">
+      {/* Background decorative elements */}
+      <div className={styles.backgroundDecorations}>
+        {/* Diagonal lines */}
+        <div className={styles.diagonalLines}>
+          <div className={`${styles.line} ${styles.line1}`}></div>
+          <div className={`${styles.line} ${styles.line2}`}></div>
+          <div className={`${styles.line} ${styles.line3}`}></div>
+          <div className={`${styles.line} ${styles.line4}`}></div>
+          <div className={`${styles.line} ${styles.line5}`}></div>
+          <div className={`${styles.line} ${styles.line6}`}></div>
+          <div className={`${styles.line} ${styles.line7}`}></div>
+          <div className={`${styles.line} ${styles.line8}`}></div>
+        </div>
+      </div>
+
       <h1>Über Mich</h1>
       <div className={styles.heroContainer}>
         <img
-          src={profilePicture}
+          src={profilePicture || "/placeholder.svg"}
           alt="Hero"
           className={styles.heroImage}
         />
