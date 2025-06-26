@@ -29,7 +29,9 @@ function Header() {
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-      <h1>Alex</h1>
+      <a href="#about" className={styles.logo}>
+        <h1>Alex</h1>
+      </a>
       <nav>
         <a href="#about" className={activeId === 'about' ? styles.active : ''}>Über mich</a>
         <a href="#projects" className={activeId === 'projects' ? styles.active : ''}>Projekte</a>
