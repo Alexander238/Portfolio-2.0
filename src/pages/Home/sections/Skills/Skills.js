@@ -17,6 +17,7 @@ import dockerIcon from '../../../../assets/skills/docker.png';
 import reactIcon from '../../../../assets/skills/react.png';
 import gsapIcon from '../../../../assets/skills/gsap.png';
 import springBootIcon from '../../../../assets/skills/springboot.png';
+import firebaseIcon from '../../../../assets/skills/firebase.webp';
 
 
 function Skills() {
@@ -39,6 +40,7 @@ function Skills() {
         { name: 'React', level: 'Grundlegend', icon: reactIcon },
         { name: 'GSAP', level: 'Grundlegend', icon: gsapIcon },
         { name: 'SpringBoot', level: 'Grundlegend', icon: springBootIcon },
+        { name: 'Firebase', level: 'Grundlegend', icon: firebaseIcon },
     ];
 
     return (
